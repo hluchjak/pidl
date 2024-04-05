@@ -40,7 +40,7 @@ class Db
             $this->name = $_ENV['PIDL_NAME'];
             $this->user = $_ENV['PIDL_USER'];
             $this->password = $_ENV['PIDL_PASSWORD'];
-            $this->charset = $_ENV['PIDL_CHARSET'];
+            $this->charset = str_replace("uft", "utf", $_ENV['PIDL_CHARSET']);
         }
     }
 
